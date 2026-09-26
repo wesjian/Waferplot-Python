@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --bg-color: #F4F7FE; /* Soft bluish gray background */
+    --card-bg: #FFFFFF;
+    --text-main: #2B3674; /* Deep navy text */
+    --text-muted: #A3AED0; /* Soft gray text */
+    --primary: #4318FF; /* Vibrant premium blue */
+    --primary-hover: #3311DB;
+    --success: #05CD99;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    font-family: 'Inter', sans-serif;
+    color: var(--text-main);
+    min-height: 100vh;
+}
+
+.app-container {
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header-section {
+    margin-bottom: 30px;
+    padding-left: 10px;
+}
+.header-title {
+    font-size: 34px;
+    font-weight: 800;
+    color: var(--text-main);
+    margin: 0;
+    letter-spacing: -1px;
+}
+.header-subtitle {
+    font-size: 16px;
+    color: var(--text-muted);
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+/* Grid Layout */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 30px;
+}
+
+/* Cards */
+.card {
+    background: var(--card-bg);
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 10px 30px rgba(112, 144, 176, 0.12); /* Soft premium shadow */
+    border: none;
+}
+
+.chart-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.side-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Text & Headings */
+.card-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-main);
+    margin: 0 0 20px 0;
+}
+
+.stat-title {
+    font-size: 13px;
+    color: var(--text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 0 8px 0;
+}
+
+.stat-value {
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--text-main);
+    margin: 0;
+    letter-spacing: -1px;
+}
+.stat-value.success {
+    color: var(--success);
+}
+
+.control-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-main);
+    margin-bottom: 8px;
+    margin-top: 20px;
+}
+.control-label:first-of-type {
+    margin-top: 0;
+}
+
+/* Modern Dropdown */
+.custom-dropdown {
+    position: relative;
+    z-index: 100;
+}
+.custom-dropdown .Select-control {
+    background-color: #F4F7FE !important;
+    border: none !important;
+    border-radius: 12px !important;
+    height: 48px;
+    color: var(--text-main) !important;
+    font-weight: 500;
+    cursor: pointer;
+}
+.custom-dropdown .is-focused:not(.is-open) > .Select-control {
+    box-shadow: 0 0 0 2px var(--primary) !important;
+}
+.custom-dropdown .Select-value-label {
+    color: var(--text-main) !important;
+    line-height: 46px !important;
+}
+.custom-dropdown .Select-placeholder {
+    color: var(--text-muted) !important;
+    line-height: 46px !important;
+}
+.custom-dropdown .Select-menu-outer {
+    border: none !important;
+    border-radius: 12px !important;
+    box-shadow: 0 10px 30px rgba(112, 144, 176, 0.2) !important;
+    margin-top: 8px;
+    overflow: hidden;
+    z-index: 9999 !important;
+}
+.custom-dropdown .Select-option {
+    padding: 12px 16px !important;
+    color: var(--text-main) !important;
+    font-weight: 500;
+    background: #FFFFFF !important;
+    cursor: pointer;
+}
+.custom-dropdown .Select-option:hover,
+.custom-dropdown .Select-option.is-focused,
+.custom-dropdown .Select-option.is-selected {
+    background: var(--primary) !important;
+    color: #FFFFFF !important;
+}
+.custom-dropdown .Select-arrow-zone, 
+.custom-dropdown .Select-clear-zone {
+    color: var(--text-muted) !important;
+}
+
+/* Upload Area */
+.upload-area {
+    border: 2px dashed #E0E5F2;
+    border-radius: 16px;
+    background: #FAFCFE;
+    padding: 30px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.upload-area:hover {
+    border-color: var(--primary);
+    background: #F4F7FE;
+}
+.upload-text {
+    color: var(--text-muted);
+    font-weight: 500;
+    font-size: 14px;
+}
+.upload-link {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+@media (max-width: 1024px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+}
