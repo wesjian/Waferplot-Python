@@ -1,4 +1,4 @@
-# Waferplot Pro
+# Waferplot
 
 ![Screenshot](docs/screenshot.png)
 
@@ -45,3 +45,7 @@ Example:
 |------|------|-------------|--------------|
 | 0    | 150  | 1052.1      | 40.5         |
 | 150  | 0    | 1048.9      | 41.2         |
+
+## License
+
+This project is licensed under the GNU General Public License v3.0.

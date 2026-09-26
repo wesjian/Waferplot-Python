@@ -24,7 +24,7 @@ def empty_figure():
 
 app.layout = html.Div(className='app-container', children=[
     html.Div(className='header-section', children=[
-        html.H1("Waferplot Pro", className='header-title'),
+        html.H1("Waferplot", className='header-title'),
         html.P("Precision Measurement Analytics", className='header-subtitle')
     ]),
     
